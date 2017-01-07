@@ -1,0 +1,22 @@
+{
+  "name": "home-movies",
+  "version": "1.0.0",
+  "description": "A movie library app",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darionfman/HomeMovies.git"
+  },
+  "author": "Darion Freeman (Darionfman@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Darionfman/HomeMovies/issues"
+  },
+  "homepage": "https://github.com/Darionfman/HomeMovies#readme",
+  "dependencies": {
+    "react": "^15.4.2"
+  }
+}
