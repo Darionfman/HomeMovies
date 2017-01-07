@@ -13,7 +13,7 @@ export default class App extends React.Component {
         <bs.Nav>
           <bs.NavItem className="center" href='/'> Home </bs.NavItem>
         </bs.Nav>
-        <div id='page-content-wrapper' className={this.state.hover}>
+        <div id='page-content-wrapper'>
           <bs.Grid fluid={true}>
             { this.props.children }
           </bs.Grid>

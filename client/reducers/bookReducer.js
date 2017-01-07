@@ -4,7 +4,7 @@ const bookReducer = function (state = {}, action) {
   case 'GET_BOOKS':
     return {
       ...state,
-      name: action.payload
+      list: action.payload
     }
 
   default:
