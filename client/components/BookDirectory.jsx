@@ -1,7 +1,7 @@
 import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import * as Action from '../actions/actions'
+import * as Action from '../actions/action'
 import * as Bs from 'react-bootstrap'
 
 class BookDirectory extends React.Component{
