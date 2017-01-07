@@ -1,6 +1,6 @@
 //This file will combine all reducers into one big object
 import { combineReducers, createStore, applyMiddleware } from 'redux'
-
+import bookReducer from './bookReducer'
 
 const logMiddleware = ({ dispatch, getState }) => {
   // console.log('Enter logMiddleware')
@@ -29,7 +29,7 @@ const finalCreateStore = applyMiddleware(logMiddleware, thunkMiddleware)(createS
 // const finalCreateStore = applyMiddleware(Thunk)(createStore)
 
 const allReducers = combineReducers({
-
+  bookStore: bookReducer
 })
 
 export const store = finalCreateStore(allReducers)
