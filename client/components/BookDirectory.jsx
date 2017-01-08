@@ -8,10 +8,29 @@ import Book from './Book'
 class BookDirectory extends React.Component{
   constructor(props){
     super(props)
+    this.state = {
+      showModal:false
+    }
   }
   componentDidMount(){
     this.props.getBooks()
     console.log(this)
+  }
+
+  submitBook(book){
+    return this.props.postBook(book)
+  }
+
+  click(){
+    this.setState({
+      showModal: true
+    }))
+  }
+
+  close(){
+    this.setState({
+      showModal: false
+    })
   }
   render(){
     const booksComp = this.props.books
@@ -28,6 +47,11 @@ class BookDirectory extends React.Component{
     )
     return (
       <Bs.Col md={12}>
+      <Submission 
+        show={this.state.showModal} 
+        submit={this.props.submitBook.bind(this)} 
+        close={this.close.bind(this)}
+      />
       {booksComp}
       </Bs.Col>
       )
@@ -44,7 +68,7 @@ function mapStateToProps(store){
 function matchDispatchToProps(dispatch){
   return bindActionCreators({
     getBooks: Action.getBooks,
-    postBooks: Action.addBookToStorage
+    postBook: Action.addBookToStorage
   }, dispatch)
 }
 export default connect(mapStateToProps, matchDispatchToProps)(BookDirectory)
